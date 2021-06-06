@@ -27,6 +27,7 @@ public class Cli {
 
     private static String name = "";
 
-    public static String getUserName() { return name; }
-
+    public static String getUserName() {
+        return name;
+    }
 }

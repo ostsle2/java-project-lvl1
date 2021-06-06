@@ -23,6 +23,8 @@ public final class App {
                 case 2:
                     Even.even();
                     break;
+                default:
+                    break;
             }
         }
     }
