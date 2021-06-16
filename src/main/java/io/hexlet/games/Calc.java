@@ -56,6 +56,8 @@ public class Calc {
             case "*":
                 result = firstTerm * secondTerm;
                 break;
+            default:
+                break;
         }
         return result;
     }

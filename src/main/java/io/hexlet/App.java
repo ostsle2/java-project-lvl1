@@ -8,6 +8,7 @@ import java.util.Scanner;
 public final class App {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
+        final int CALC = 3;
         while (true) {
             System.out.println("Please enter the game number and press Enter.");
             System.out.println("1 - Greet");
@@ -27,7 +28,7 @@ public final class App {
                 case 2:
                     Even.even();
                     break;
-                case 3:
+                case CALC:
                     Calc.calc();
                     break;
                 default:
