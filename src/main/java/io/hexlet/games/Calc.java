@@ -5,17 +5,17 @@ import io.hexlet.Cli;
 import java.util.Random;
 
 public class Calc {
-    static Random random = new Random();
-    static final int upperBound = 10;
-    static final int winningCount = 3;
+    private static Random random = new Random();
+    static final int UPPER_BOUND = 10;
+    static final int WINNING_COUNT = 3;
 
 
     private static int generateFirstTerm() {
-        return random.nextInt(upperBound);
+        return random.nextInt(UPPER_BOUND);
     }
 
     private static int generateSecondTerm() {
-        return random.nextInt(upperBound);
+        return random.nextInt(UPPER_BOUND);
     }
 
     private static String generateOperator() {
@@ -26,7 +26,7 @@ public class Calc {
 
     public static void calc() {
         Cli.print("What is the result of the expression?");
-        for (int countOfRightAnswers = 0; countOfRightAnswers < winningCount; countOfRightAnswers++) {
+        for (int countOfRightAnswers = 0; countOfRightAnswers < WINNING_COUNT; countOfRightAnswers++) {
             int firstTerm = generateFirstTerm();
             int secondTerm = generateSecondTerm();
             String operator = generateOperator();
