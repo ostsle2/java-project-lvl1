@@ -2,9 +2,9 @@ package io.hexlet.games;
 
 public interface Game {
 
-    public String getRule();
+    String getRule();
 
-    public String getQuestion();
+    String getQuestion();
 
-    public String getResult();
+    String getResult();
 }

@@ -1,16 +1,13 @@
 package io.hexlet.games;
 
-import io.hexlet.Cli;
-
 import java.util.Random;
 
-public class Calc implements Game{
+public class Calc implements Game {
     private static Random random = new Random();
     static final int UPPER_BOUND = 10;
     private int firstTerm;
     private int secondTerm;
     private String operator;
-
 
     private static int generateFirstTerm() {
         return random.nextInt(UPPER_BOUND);

@@ -9,7 +9,7 @@ public class Engine {
     public static void gamePlay(Game game) {
         Cli.print(game.getRule());
         for (int countOfRightAnswers = 0; countOfRightAnswers < WINNING_COUNT; countOfRightAnswers++) {
-            Cli.print("Question:" + game.getQuestion());
+            Cli.print("Question: " + game.getQuestion());
             String answer = Cli.readLine();
             String result = game.getResult();
             if (!answer.equalsIgnoreCase(result)) {

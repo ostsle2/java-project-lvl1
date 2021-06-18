@@ -41,6 +41,9 @@ public final class App {
                 case gcd:
                     Engine.gamePlay(new GCD());
                     break;
+                case progression:
+                    Engine.gamePlay(new Progression());
+                    break;
                 default:
                     break;
             }
