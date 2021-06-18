@@ -4,10 +4,12 @@ import io.hexlet.Cli;
 
 import java.util.Random;
 
-public class Calc {
+public class Calc implements Game{
     private static Random random = new Random();
     static final int UPPER_BOUND = 10;
-    static final int WINNING_COUNT = 3;
+    private int firstTerm;
+    private int secondTerm;
+    private String operator;
 
 
     private static int generateFirstTerm() {
@@ -22,26 +24,6 @@ public class Calc {
         String[] operators = {"+", "-", "*"};
         int i = random.nextInt(operators.length);
         return operators[i];
-    }
-
-    public static void calc() {
-        Cli.print("What is the result of the expression?");
-        for (int countOfRightAnswers = 0; countOfRightAnswers < WINNING_COUNT; countOfRightAnswers++) {
-            int firstTerm = generateFirstTerm();
-            int secondTerm = generateSecondTerm();
-            String operator = generateOperator();
-            int calculationResult = calculateExpression(firstTerm, operator, secondTerm);
-            Cli.print("Question:" + firstTerm + operator + secondTerm);
-            int answer = Integer.parseInt(Cli.readLine());
-
-            if (!(answer == calculationResult)) {
-                Cli.print("'" + answer + "' is wrong answer ;(. Correct answer was '" + calculationResult + "'.");
-                return;
-            }
-            Cli.print("Correct!");
-        }
-        Cli.print("Congratulations, " + Cli.getUserName());
-
     }
 
     public static int calculateExpression(int firstTerm, String operator, int secondTerm) {
@@ -62,4 +44,21 @@ public class Calc {
         return result;
     }
 
+    @Override
+    public String getRule() {
+        return "What is the result of the expression?";
+    }
+
+    @Override
+    public String getQuestion() {
+        firstTerm = generateFirstTerm();
+        secondTerm = generateSecondTerm();
+        operator = generateOperator();
+        return firstTerm + operator + secondTerm;
+    }
+
+    @Override
+    public String getResult() {
+        return String.valueOf(calculateExpression(firstTerm, operator, secondTerm));
+    }
 }
