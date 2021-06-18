@@ -1,10 +1,7 @@
 package io.hexlet;
 
 import io.hexlet.code.Engine;
-import io.hexlet.games.Calc;
-import io.hexlet.games.Even;
-import io.hexlet.games.GCD;
-import io.hexlet.games.Progression;
+import io.hexlet.games.*;
 
 import java.util.Scanner;
 
@@ -14,6 +11,7 @@ public final class App {
         final int calc = 3;
         final int gcd = 4;
         final int progression = 5;
+        final int prime = 6;
         while (true) {
             System.out.println("Please enter the game number and press Enter.");
             System.out.println("1 - Greet");
@@ -21,6 +19,7 @@ public final class App {
             System.out.println("3 - Calc");
             System.out.println("4 - GCD");
             System.out.println("5 - Progression");
+            System.out.println("6 - Prime");
             System.out.println("0 - Exit");
             int choice = sc.nextInt();
             System.out.println("Your choice: " + choice);
@@ -43,6 +42,9 @@ public final class App {
                     break;
                 case progression:
                     Engine.gamePlay(new Progression());
+                    break;
+                case prime:
+                    Engine.gamePlay(new Prime());
                     break;
                 default:
                     break;
