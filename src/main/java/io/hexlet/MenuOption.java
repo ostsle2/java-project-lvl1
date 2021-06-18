@@ -1,7 +1,7 @@
 package io.hexlet;
 
 /**
- * Start screen menu options
+ * Start screen menu options.
  * */
 public enum MenuOption {
     Exit(0),
