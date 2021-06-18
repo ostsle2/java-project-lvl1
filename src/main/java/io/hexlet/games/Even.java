@@ -1,12 +1,10 @@
 package io.hexlet.games;
 
-import io.hexlet.Cli;
-
 import java.util.Random;
 
-public class Even implements Game{
-    final Random random = new Random();
-    final int upperBound = 1000;
+public class Even implements Game {
+    private final Random random = new Random();
+    private final int UPPER_BOUND = 1000;
 
     private int value;
 
@@ -17,7 +15,7 @@ public class Even implements Game{
 
     @Override
     public String getQuestion() {
-        value = random.nextInt(upperBound);
+        value = random.nextInt(UPPER_BOUND);
         return String.valueOf(value);
     }
 

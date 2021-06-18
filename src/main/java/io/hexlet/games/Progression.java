@@ -4,20 +4,20 @@ import java.util.Random;
 
 public class Progression implements Game {
     private static Random random = new Random();
-    static final int minBound = 5;
-    static final int maxBound = 10;
+    static final int MIN_BOUND = 5;
+    static final int UPPER_BOUND = 10;
     private int result;
 
     private static int generateStartElement() {
-        return random.nextInt(minBound);
+        return random.nextInt(MIN_BOUND);
     }
 
     private static int generateDifference() {
-        return random.nextInt(minBound) + 1;
+        return random.nextInt(MIN_BOUND) + 1;
     }
 
     private static int generateProgressionLength() {
-        return random.nextInt((maxBound - minBound)) + minBound;
+        return random.nextInt((UPPER_BOUND - MIN_BOUND)) + MIN_BOUND;
     }
 
     private String printProgression() {

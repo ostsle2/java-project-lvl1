@@ -4,11 +4,11 @@ import java.util.Random;
 
 public class Prime implements Game {
     private static Random random = new Random();
-    static final int maxBound = 100;
+    static final int UPPER_BOUND = 100;
     private int value;
 
     private static int generateValue() {
-        return random.nextInt(maxBound) + 2;
+        return random.nextInt(UPPER_BOUND) + 2;
     }
 
     private static boolean isPrime(int value) {
