@@ -16,7 +16,7 @@ public final class App {
         while (true) {
             System.out.println("Please enter the game number and press Enter.");
             for (MenuOption option: options) {
-                System.out.println(option.getValue() + "-" + option.name());
+                System.out.println(option.getNumber() + "-" + option.name());
             }
             int choice = sc.nextInt();
             System.out.println("Your choice: " + choice);
