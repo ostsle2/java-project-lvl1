@@ -24,21 +24,16 @@ public class Calc implements Game {
     }
 
     public static int calculateExpression(int firstTerm, String operator, int secondTerm) {
-        int result = 0;
         switch (operator) {
             case "+":
-                result = firstTerm + secondTerm;
-                break;
+                return firstTerm + secondTerm;
             case "-":
-                result = firstTerm - secondTerm;
-                break;
+                return firstTerm - secondTerm;
             case "*":
-                result = firstTerm * secondTerm;
-                break;
+                return firstTerm * secondTerm;
             default:
-                break;
+                return 0;
         }
-        return result;
     }
 
     /**

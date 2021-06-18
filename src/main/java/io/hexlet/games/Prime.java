@@ -13,25 +13,33 @@ public class Prime implements Game {
 
     private static boolean isPrime(int value) {
         for (int i = 2; i <= value / 2; i++) {
-            if ((value % i) == 0) {
+            if (value % i == 0) {
                 return false;
             }
         }
         return true;
     }
 
-
+    /**
+     * {@inheritDoc}
+     */
     @Override
     public String getRule() {
         return "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
     }
 
+    /**
+     * {@inheritDoc}
+     */
     @Override
     public String getQuestion() {
         value = generateValue();
         return String.valueOf(value);
     }
 
+    /**
+     * {@inheritDoc}
+     */
     @Override
     public String getResult() {
         return isPrime(value) ? "yes" : "no";

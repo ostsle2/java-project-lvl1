@@ -7,7 +7,6 @@ public class GCD implements Game {
     static final int UPPER_BOUND = 10;
     private int firstTerm;
     private int secondTerm;
-    private int calculationResult;
 
     private static int generateFirstTerm() {
         return random.nextInt(UPPER_BOUND);
@@ -28,22 +27,30 @@ public class GCD implements Game {
         return a;
     }
 
+    /**
+     * {@inheritDoc}
+     */
     @Override
     public String getRule() {
         return "Find the greatest common divisor of given numbers.";
     }
 
+    /**
+     * {@inheritDoc}
+     */
     @Override
     public String getQuestion() {
         firstTerm = generateFirstTerm();
         secondTerm = generateSecondTerm();
-        return String.valueOf(firstTerm + " " + secondTerm);
+        return firstTerm + " " + secondTerm;
     }
 
-
+    /**
+     * {@inheritDoc}
+     */
     @Override
     public String getResult() {
-        calculationResult = calculateGcd(firstTerm, secondTerm);
+        int calculationResult = calculateGcd(firstTerm, secondTerm);
         return String.valueOf(calculationResult);
     }
 }

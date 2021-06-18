@@ -17,10 +17,10 @@ public class Progression implements Game {
     }
 
     private static int generateProgressionLength() {
-        return random.nextInt((UPPER_BOUND - MIN_BOUND)) + MIN_BOUND;
+        return random.nextInt((UPPER_BOUND - MIN_BOUND) + 1) + MIN_BOUND;
     }
 
-    private String printProgression() {
+    private String getProgression() {
         int difference = generateDifference();
         int progressionLength = generateProgressionLength();
         int hiddenElement = random.nextInt(progressionLength) + 1;
@@ -38,16 +38,25 @@ public class Progression implements Game {
         return resultedProgression;
     }
 
+    /**
+     * {@inheritDoc}
+     */
     @Override
     public String getRule() {
         return "What number is missing in the progression?";
     }
 
+    /**
+     * {@inheritDoc}
+     */
     @Override
     public String getQuestion() {
-        return printProgression();
+        return getProgression();
     }
 
+    /**
+     * {@inheritDoc}
+     */
     @Override
     public String getResult() {
         return String.valueOf(result);
