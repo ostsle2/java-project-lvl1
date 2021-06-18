@@ -1,7 +1,7 @@
 package io.hexlet;
 
 /**
- * Start screen menu options
+ * Start screen menu options.
  * */
 public enum MenuOption {
     Exit(0),
@@ -12,7 +12,7 @@ public enum MenuOption {
     Progression(5),
     Prime(6);
 
-    public int number;
+    private int number;
 
     public int getNumber() {
         return number;
