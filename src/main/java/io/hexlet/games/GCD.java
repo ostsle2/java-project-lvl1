@@ -40,6 +40,7 @@ public class GCD implements Game {
         return String.valueOf(firstTerm + " " + secondTerm);
     }
 
+
     @Override
     public String getResult() {
         calculationResult = calculateGcd(firstTerm, secondTerm);

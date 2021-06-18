@@ -41,11 +41,17 @@ public class Calc implements Game {
         return result;
     }
 
+    /**
+     * {@inheritDoc}
+     */
     @Override
     public String getRule() {
         return "What is the result of the expression?";
     }
 
+    /**
+     * {@inheritDoc}
+     */
     @Override
     public String getQuestion() {
         firstTerm = generateFirstTerm();
@@ -54,6 +60,9 @@ public class Calc implements Game {
         return firstTerm + operator + secondTerm;
     }
 
+    /**
+     * {@inheritDoc}
+     */
     @Override
     public String getResult() {
         return String.valueOf(calculateExpression(firstTerm, operator, secondTerm));
