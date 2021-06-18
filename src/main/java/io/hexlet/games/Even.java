@@ -4,7 +4,7 @@ import java.util.Random;
 
 public class Even implements Game {
     private final Random random = new Random();
-    private final int UPPER_BOUND = 1000;
+    static final int UPPER_BOUND = 1000;
 
     private int value;
 

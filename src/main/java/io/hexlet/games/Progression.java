@@ -23,7 +23,7 @@ public class Progression implements Game {
     private String printProgression() {
         int difference = generateDifference();
         int progressionLength = generateProgressionLength();
-        int hiddenElement = random.nextInt(progressionLength)+1;
+        int hiddenElement = random.nextInt(progressionLength) + 1;
         int currElement = generateStartElement();
         String resultedProgression = "";
         for (int i = 1; i <= progressionLength; i++) {
