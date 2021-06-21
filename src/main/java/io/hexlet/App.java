@@ -29,18 +29,23 @@ public final class App {
                 Cli.cli();
                 break;
             case Even:
+                Cli.cli();
                 Engine.gamePlay(new Even());
                 break;
             case Calc:
+                Cli.cli();
                 Engine.gamePlay(new Calc());
                 break;
             case GCD:
+                Cli.cli();
                 Engine.gamePlay(new GCD());
                 break;
             case Progression:
+                Cli.cli();
                 Engine.gamePlay(new Progression());
                 break;
             case Prime:
+                Cli.cli();
                 Engine.gamePlay(new Prime());
                 break;
             default:
