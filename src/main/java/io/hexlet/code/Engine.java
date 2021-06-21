@@ -18,7 +18,7 @@ public class Engine {
             }
             Cli.print("Correct!");
         }
-        Cli.print("Congratulations, " + Cli.getUserName());
+        Cli.print("Congratulations, " + Cli.getUserName() + "!");
     }
 
 }
