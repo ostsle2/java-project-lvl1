@@ -14,6 +14,7 @@ public class Engine {
             String result = game.getResult();
             if (!answer.equalsIgnoreCase(result)) {
                 Cli.print("'" + answer + "' is wrong answer ;(. Correct answer was '" + result + "'.");
+                Cli.print("Let's try again, " + Cli.getUserName() + "!");
                 return;
             }
             Cli.print("Correct!");
