@@ -8,7 +8,7 @@ public class Cli {
     public static void cli() {
         Cli.print("May I have your name?");
         name = Cli.readLine();
-        Cli.print("Hello, " + name);
+        Cli.print("Hello, " + name+"!");
     }
 
     public static void print(String message) {
