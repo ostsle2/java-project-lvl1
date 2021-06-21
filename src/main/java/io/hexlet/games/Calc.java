@@ -52,7 +52,7 @@ public class Calc implements Game {
         firstTerm = generateFirstTerm();
         secondTerm = generateSecondTerm();
         operator = generateOperator();
-        return firstTerm + operator + secondTerm;
+        return firstTerm + " " + operator + " " + secondTerm;
     }
 
     /**
