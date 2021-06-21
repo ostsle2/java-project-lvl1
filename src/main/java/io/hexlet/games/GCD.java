@@ -9,11 +9,11 @@ public class GCD implements Game {
     private int secondTerm;
 
     private static int generateFirstTerm() {
-        return random.nextInt(UPPER_BOUND);
+        return random.nextInt(UPPER_BOUND) + 1;
     }
 
     private static int generateSecondTerm() {
-        return random.nextInt(UPPER_BOUND);
+        return random.nextInt(UPPER_BOUND) + 1;
     }
 
     public static int calculateGcd(int a, int b) {
