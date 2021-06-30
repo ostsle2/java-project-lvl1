@@ -20,11 +20,7 @@ public class Progression implements Game {
         return random.nextInt((UPPER_BOUND - MIN_BOUND) + 1) + MIN_BOUND;
     }
 
-    private String getProgression() {
-        int difference = generateDifference();
-        int progressionLength = generateProgressionLength();
-        int hiddenElement = random.nextInt(progressionLength) + 1;
-        int currElement = generateStartElement();
+    private String getProgression(int difference, int progressionLength, int hiddenElement, int currElement) {
         String resultedProgression = "";
         for (int i = 1; i <= progressionLength; i++) {
             currElement = currElement + difference;
@@ -51,7 +47,11 @@ public class Progression implements Game {
      */
     @Override
     public String getQuestion() {
-        return getProgression();
+        int difference = generateDifference();
+        int progressionLength = generateProgressionLength();
+        int hiddenElement = random.nextInt(progressionLength) + 1;
+        int currElement = generateStartElement();
+        return getProgression(difference, progressionLength, hiddenElement, currElement);
     }
 
     /**

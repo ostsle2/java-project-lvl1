@@ -1,55 +1,55 @@
 package io.hexlet;
 
 import io.hexlet.code.Engine;
-import io.hexlet.games.Calc;
-import io.hexlet.games.Even;
-import io.hexlet.games.GCD;
-import io.hexlet.games.Prime;
-import io.hexlet.games.Progression;
+import io.hexlet.games.*;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public final class App {
+
+    private static void CheckChoice(MenuOption[] options, int choice) {
+        if (Arrays.stream(options).allMatch(opt -> opt.getNumber() != choice)) {
+            Cli.print("Вы выбрали несуществующую игру :(");
+            System.exit(0);
+        }
+    }
+
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         MenuOption[] options = MenuOption.values();
-        System.out.println("Please enter the game number and press Enter.");
+        Cli.print("Please enter the game number and press Enter.");
         for (MenuOption option : options) {
-            System.out.println(option.getNumber() + "-" + option.name());
+            Cli.print(option.getNumber() + "-" + option.name());
         }
         int choice = sc.nextInt();
-        System.out.println("Your choice: " + choice);
+        Cli.print("Your choice: " + choice);
+        CheckChoice(options, choice);
         System.out.println("Welcome to the Brain Games!");
         MenuOption option = options[choice];
         switch (option) {
-            case Exit:
-                System.exit(0);
-                break;
-            case Greet:
-                Cli.cli();
-                break;
-            case Even:
-                Cli.cli();
+            case Greet -> Cli.greet();
+            case Even -> {
+                Cli.greet();
                 Engine.gamePlay(new Even());
-                break;
-            case Calc:
-                Cli.cli();
+            }
+            case Calc -> {
+                Cli.greet();
                 Engine.gamePlay(new Calc());
-                break;
-            case GCD:
-                Cli.cli();
+            }
+            case GCD -> {
+                Cli.greet();
                 Engine.gamePlay(new GCD());
-                break;
-            case Progression:
-                Cli.cli();
+            }
+            case Progression -> {
+                Cli.greet();
                 Engine.gamePlay(new Progression());
-                break;
-            case Prime:
-                Cli.cli();
+            }
+            case Prime -> {
+                Cli.greet();
                 Engine.gamePlay(new Prime());
-                break;
-            default:
-                break;
+            }
+            case Exit -> System.exit(0);
         }
     }
 }

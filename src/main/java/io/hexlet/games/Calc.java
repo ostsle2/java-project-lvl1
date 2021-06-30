@@ -24,16 +24,13 @@ public class Calc implements Game {
     }
 
     public static int calculateExpression(int firstTerm, String operator, int secondTerm) {
-        switch (operator) {
-            case "+":
-                return firstTerm + secondTerm;
-            case "-":
-                return firstTerm - secondTerm;
-            case "*":
-                return firstTerm * secondTerm;
-            default:
-                return 0;
-        }
+        var result = switch (operator) {
+            case "+" -> firstTerm + secondTerm;
+            case "-" -> firstTerm - secondTerm;
+            case "*" -> firstTerm * secondTerm;
+            default -> throw new IllegalArgumentException("Invalid operator value: " + operator);
+        };
+        return result;
     }
 
     /**

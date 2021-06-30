@@ -6,7 +6,7 @@ public class Cli {
 
     private static Scanner sc = new Scanner(System.in);
 
-    public static void cli() {
+    public static void greet() {
         Cli.print("May I have your name?");
         name = Cli.readLine();
         Cli.print("Hello, " + name + "!");
