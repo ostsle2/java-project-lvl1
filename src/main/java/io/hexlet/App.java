@@ -1,7 +1,11 @@
 package io.hexlet;
 
 import io.hexlet.code.Engine;
-import io.hexlet.games.*;
+import io.hexlet.games.Calc;
+import io.hexlet.games.Even;
+import io.hexlet.games.GCD;
+import io.hexlet.games.Prime;
+import io.hexlet.games.Progression;
 
 import java.util.Arrays;
 import java.util.Scanner;
