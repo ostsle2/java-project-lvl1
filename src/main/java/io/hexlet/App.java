@@ -8,7 +8,7 @@ import java.util.Scanner;
 
 public final class App {
 
-    private static void CheckChoice(MenuOption[] options, int choice) {
+    private static void checkChoice(MenuOption[] options, int choice) {
         if (Arrays.stream(options).allMatch(opt -> opt.getNumber() != choice)) {
             Cli.print("Вы выбрали несуществующую игру :(");
             System.exit(0);
@@ -24,7 +24,7 @@ public final class App {
         }
         int choice = sc.nextInt();
         Cli.print("Your choice: " + choice);
-        CheckChoice(options, choice);
+        checkChoice(options, choice);
         System.out.println("Welcome to the Brain Games!");
         MenuOption option = options[choice];
         switch (option) {
@@ -50,6 +50,7 @@ public final class App {
                 Engine.gamePlay(new Prime());
             }
             case Exit -> System.exit(0);
+            default -> System.exit(0);
         }
     }
 }
